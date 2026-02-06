@@ -1,4 +1,4 @@
-import { User } from "@clerk/express";
+import User from "../models/User.js";
 import {Inngest} from "inngest";
 
 // Create a client to send and receive events
