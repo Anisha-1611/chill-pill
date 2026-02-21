@@ -6,7 +6,7 @@ import { assets } from '../../assets/assets'
 const AdminSidebar = () => {
 
     const user={
-        first:'Admin',
+        firstName:'Admin',
         lastName:'User',
         imageUrl:assets.profile,
     }
@@ -14,8 +14,8 @@ const AdminSidebar = () => {
     const adminNavlinks=[
         {name:'Dashboard', path:'/admin', icon:LayoutDashboardIcon},
         {name:'Add Shows', path:'/admin/add-shows', icon:PlusSquareIcon},
-        {name:'List shows', path:'/admin/list-shows', icon:ListIcon},
-        {name:'List bookings' , path: '/admin/list-bookings', icon:ListCollapseIcon},
+        {name:'List Shows', path:'/admin/list-shows', icon:ListIcon},
+        {name:'List Bookings' , path: '/admin/list-bookings', icon:ListCollapseIcon},
     ]
 
   return (

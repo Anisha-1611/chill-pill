@@ -16,7 +16,7 @@ const navigate=useNavigate()
       <h1 className='text-5xl md:text-[70px] md:leading-18 font-semibold max-w-110' > Guardians <br/> of the Galaxy</h1>
 
       <div className='flex items-center gap-4 text-gray-300'>
-        <span> Action | Adventure | Sci-fi</span>
+        <span> Action | Adventure | Sci-Fi</span>
         <div className='flex items-center gap-1'>
             <CalendarIcon className='w-4.5 h-4.5'/>2025
         </div>
