@@ -1,4 +1,5 @@
 
+import { inngest } from "../inngest/index.js";
 import Booking from "../models/Booking.js";
 import Show from "../models/Show.js"
 import stripe from 'stripe'
@@ -43,6 +44,9 @@ export const createBooking = async(req,res)=>{
             amount: showData.showPrice*selectedSeats.length,
             bookedSeats: selectedSeats
         })
+
+// console.log("✅ Booking created with ID:", booking._id);
+
         selectedSeats.map((seat)=>{
             showData.occupiedSeats[seat] = userId;
         })
@@ -77,6 +81,9 @@ export const createBooking = async(req,res)=>{
         await booking.save() 
 
         //Run Inngest Shedular function to check payment status after  10 minutes 
+        
+        // console.log("📤 Sending bookingId to Inngest:", booking._id.toString());
+
         await inngest.send({
             name:"app/checkpayment",
             data:{
